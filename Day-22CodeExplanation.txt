@@ -1,0 +1,38 @@
+This is a  program  which was designed as part of my "30-Day Python Challenge." 
+
+1. safe_calculator():
+   - The function safe_calculator() is defined to encapsulate the calculator logic.
+   - Next it prints a welcome message to the user, indicating that they can type 'q' to quit the program.
+   - Then it enters into while loop it is used to continuously ask the user for input until they decide to quit by typing 'q'.
+   - The code uses a try block to wrap the input and calculation logic, allowing it to catch and handle various exceptions that might occur.
+   - The user is asked to enter the first number (num1). If the input is 'q', the loop breaks, and the program exits.
+   - else the inputed number is then converted to a float and then stored into num1.
+   - The user is asked to enter an operator (op). If the operator is not one of the specified (+, -, *, /), a ValueError is raised with 
+     a user friendly message.
+   - The user is askeded to enter the second number (num2). Similar to num1, if the input is 'q', the loop breaks, else the number is atored
+     into num2 in float datatype.
+   - Depending on the operator provided, the corresponding arithmetic operation is performed.
+   - For division, there is an additional check to ensure that num2 is not zero, as dividing by zero would raise a ZeroDivisionError.
+   - If no exceptions occur, the result of the operation is displayed.
+   - If a ValueError occurs (due to invalid number or operator), an error message is displayed.
+   - If a ZeroDivisionError occurs (attempting division by zero), a specific error message is displayed.
+   - A generic exception handler catches any other unexpected errors and prints an error message.
+
+Starting point: The function safe_calculator() is called within an if __name__ == "__main__": block, ensuring that it runs only if the script is executed directly (not imported as a module).
+
+what I've learnt:
+- Exception Handling: Exception refers to the run time error, means the error that occurs while program is running. Exception isn't refers
+  to the syntax error, I/O error, logical errors ... these errors can be managed while writing program, but exceptions occurs while execution
+  of program. So these errors will be managed by using exception handling.
+- So, instead of program crashing while runing we can keep responding to the exceptions and maybe even keep going.
+- Python mainly uses 4 keywords to manage exceptions i.e;
+    -> try: We put the code that might cause an exception inside the try block. Simply says, Let's try this code. It might cause a problem.
+    -> except: We catch and handle specific exceptions here. Simply says, If there is a problem, do this instead.
+    -> else: The Code here runs if no exception was raised in the try block. Simply says, if no problem happens, do this.
+    -> finally: Code here runs no matter what — whether there was an exception or not. Simply says, No matter what happened (problem or not), do this at the end.
+- The advantages of exception handling:
+    - stops program from crashing.
+    - Makes code clean.
+    - Helps to find bugs.
+    - Keeps program running.
+    - Seprates error handling from normal code.
